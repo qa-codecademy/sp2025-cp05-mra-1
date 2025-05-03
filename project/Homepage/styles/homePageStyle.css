@@ -88,7 +88,7 @@ nav.scrolled {
     background-color: #f9f9f9;
     text-align: left;
     background-image: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), 
-                      url('/project/assets/photo-1600585154340-be6161a56a0c.avif');
+                      url('/project/Homepage/assets/photo-1600585154340-be6161a56a0c.avif');
     background-size: cover;
     background-position: center;
 }
@@ -241,7 +241,7 @@ nav.scrolled {
 }
 
 .story-image {
-    background-image: url('/project/assets/photo-1600880292203-757bb62b4baf.avif');
+    background-image: url('/project/Homepage/assets/photo-1600880292203-757bb62b4baf.avif');
     background-size: cover;
     background-position: center;
     height: 400px;
