@@ -1,0 +1,367 @@
+body {
+  margin: 0px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+.island-navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  padding: 10px 20px;
+  border-radius: 30px;
+
+  background-color: transparent;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  max-width: 900px;
+  width: fit-content;
+  transition: all 0.3s ease;
+}
+
+.island-navbar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+
+  opacity: 1;
+  background-color: rgba(124, 199, 74, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border-radius: inherit;
+}
+
+.navbar-header {
+  display: flex;
+  align-items: center;
+  width: auto;
+  flex-grow: 1;
+  transition: justify-content 0.3s ease;
+}
+
+.navbar-brand {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  color: white;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+  transition: margin 0.3s ease;
+}
+
+.navbar-toggler {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0px;
+  line-height: 1;
+  margin-left: 10px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-toggler.active .toggler-icon {
+  transform: rotate(180deg);
+}
+
+.navbar-nav {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  gap: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-nav li {
+  margin: 0px;
+}
+
+.navbar-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14.4px;
+  font-weight: bolder;
+  padding: 5px 0px;
+  position: relative;
+  transition: color 0.3s ease;
+  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.7);
+}
+
+.navbar-nav a:hover {
+  color: #007bff;
+}
+
+.navbar-nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #007bff;
+  transition: width 0.3s ease-out;
+}
+
+.navbar-nav a:hover::after {
+  width: 100%;
+}
+
+.quote-btn {
+  background-color: #2a7f62;
+
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14.4px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.quote-btn:hover {
+  background-color: #3fbb92;
+}
+
+.content {
+  padding-top: 80px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+section {
+  padding: 60px 0px;
+  min-height: 500px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+section:last-child {
+  border-bottom: none;
+}
+
+section h2 {
+  color: #222;
+  margin-bottom: 25px;
+  font-size: 35.2px;
+}
+
+section p {
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .island-navbar {
+    top: 10px;
+    padding: 8px 15px;
+    border-radius: 25px;
+    width: calc(100vw - 30px);
+    max-width: 100vw;
+    min-width: 0px;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-x: hidden;
+    height: auto;
+    gap: 0px;
+    box-sizing: border-box;
+  }
+
+  .island-navbar::before {
+    border-radius: inherit;
+  }
+
+  .navbar-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    padding: 0px;
+    box-sizing: border-box;
+    flex-wrap: nowrap;
+  }
+
+  .navbar-brand {
+    font-size: 16px;
+    white-space: nowrap;
+    margin: 0 auto;
+    flex-shrink: 1;
+    min-width: 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    text-align: center;
+    flex-grow: 1;
+    max-width: calc(100% - 60px);
+    order: 2;
+  }
+
+  .navbar-toggler {
+    display: block;
+    position: static;
+    transform: none;
+    margin-left: auto;
+    margin-right: 0px;
+    flex-shrink: 0;
+    padding: 5px;
+    min-width: auto;
+    order: 3;
+
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0s;
+
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .navbar-toggler .toggler-icon {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+    transition: transform 0.3s ease;
+  }
+
+  .navbar-header::before {
+    content: "";
+    display: block;
+
+    width: 36px;
+    order: 1;
+  }
+
+  .island-navbar.open .navbar-header {
+    justify-content: space-between;
+  }
+
+  .island-navbar.open .navbar-brand {
+    order: -1;
+    flex-grow: 0;
+    max-width: calc(100% - 60px);
+    margin-right: 10px;
+  }
+
+  .island-navbar.open .navbar-toggler {
+    position: static;
+    transform: rotate(180deg);
+    margin-left: auto;
+    margin-right: 0px;
+    order: 1;
+
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0s;
+  }
+
+  .island-navbar.open .navbar-header::before {
+    display: none;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+    padding-top: 10px;
+    max-height: 0px;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out,
+      visibility 0s 0.3s;
+  }
+
+  .island-navbar.open .navbar-nav {
+    max-height: 500px;
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out,
+      visibility 0s 0s;
+  }
+
+  .navbar-nav li {
+    width: 100%;
+  }
+
+  .navbar-nav a {
+    padding: 8px 0px;
+    font-size: 16px;
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+
+  .navbar-nav a::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .quote-btn {
+    display: none;
+  }
+
+  .island-navbar.scrolled-down:not(.open) .navbar-toggler {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  .island-navbar.scrolled-down:not(.open) .navbar-header::before {
+    display: none;
+  }
+
+  .content {
+    padding-top: 80px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  section {
+    padding: 40px 0px;
+    min-height: auto;
+  }
+
+  section h2 {
+    font-size: 28.8px;
+  }
+}

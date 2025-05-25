@@ -1,0 +1,152 @@
+.circular-image-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 80px;
+  height: 80px;
+  background-color: rgba(143, 227, 110, 0.4);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  z-index: 1000px;
+  overflow: hidden;
+}
+
+.circular-image-btn .main-logo-icon {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+
+.speech-bubble-periodic {
+  position: fixed;
+  bottom: 110px;
+  right: 20px;
+  transform: none;
+  background-color: rgba(143, 227, 110, 0.8);
+  color: #ffffff;
+  padding: 10px 30px 10px 15px;
+  border-radius: 8px;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  white-space: nowrap;
+  font-size: 14px;
+  text-align: center;
+  pointer-events: none;
+  z-index: 100431px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  max-width: 250px;
+  box-sizing: border-box;
+}
+
+.speech-bubble-periodic::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: 35px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: rgba(143, 227, 110, 0.8) transparent transparent transparent;
+}
+
+.speech-bubble-close-btn {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 24px;
+  height: 24px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  color: white;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 100432px;
+  pointer-events: auto;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  padding: 0px;
+  transition: background-color 0.2s ease;
+}
+
+.speech-bubble-close-btn:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .circular-image-btn {
+    width: 70px;
+    height: 70px;
+    bottom: 15px;
+    right: 15px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  .circular-image-btn .main-logo-icon {
+    width: 65%;
+    height: 65%;
+  }
+
+  .speech-bubble-periodic {
+    font-size: 13px;
+    padding: 8px 25px 8px 12px;
+    bottom: 95px;
+    right: 15px;
+    max-width: 200px;
+  }
+
+  .speech-bubble-periodic::after {
+    right: 30px;
+    border-width: 7px;
+  }
+
+  .speech-bubble-close-btn {
+    width: 22px;
+    height: 22px;
+    font-size: 15px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .circular-image-btn {
+    width: 60px;
+    height: 60px;
+    bottom: 10px;
+    right: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .circular-image-btn .main-logo-icon {
+    width: 60%;
+    height: 60%;
+  }
+
+  .speech-bubble-periodic {
+    font-size: 12px;
+    padding: 6px 20px 6px 10px;
+    bottom: 75px;
+    right: 10px;
+    max-width: 180px;
+  }
+
+  .speech-bubble-periodic::after {
+    right: 25px;
+    border-width: 6px;
+  }
+
+  .speech-bubble-close-btn {
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
