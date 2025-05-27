@@ -24,7 +24,7 @@
   width: 1200px;
   top: -5px;
   left: -225px;
-  z-index: 2px;
+  z-index: 2;
   transition: opacity 0.5s ease-in-out;
 }
 
@@ -34,7 +34,7 @@
   height: 100%;
   overflow: hidden;
   transition: clip-path 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55),
-    z-index 0s 0.35s;
+    z-index 0 0.35;
 }
 
 .blurred-background {
@@ -48,7 +48,7 @@
   background-repeat: no-repeat;
   filter: blur(4px);
   transition: filter 0.5s ease-in-out;
-  z-index: 1px;
+  z-index: 1;
 }
 
 .top-right-section {
@@ -76,7 +76,7 @@
   color: white;
   font-size: 40px;
   font-weight: bold;
-  z-index: 3px;
+  z-index: 3;
   cursor: pointer;
 }
 
@@ -84,7 +84,7 @@
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 5px;
-  z-index: 4px;
+  z-index: 4;
   transition: transform 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
   white-space: nowrap;
   text-align: center;
@@ -100,7 +100,7 @@
 
 .diagonal-half.active-expanded {
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-  z-index: 5px;
+  z-index: 5;
 }
 
 .diagonal-half.active-expanded .blurred-background {
@@ -116,7 +116,7 @@
 .diagonal-box-container:has(.bottom-left-section.active-expanded)
   .top-right-section {
   clip-path: polygon(0% 0%, 0% 0%, 0% 0%);
-  z-index: 1px;
+  z-index: 1;
 }
 
 .diagonal-box-container:has(.diagonal-half.active-expanded)

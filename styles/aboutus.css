@@ -161,7 +161,7 @@
   background: rgba(0, 0, 0, 0.4);
   border: none;
   cursor: pointer;
-  z-index: 1001px;
+  z-index: 1001;
   padding: 0px 15px;
   user-select: none;
 }
@@ -247,7 +247,7 @@
   width: 90%;
   height: auto;
   object-fit: contain;
-  z-index: 1px;
+  z-index: 1;
 }
 
 .person .divider {
