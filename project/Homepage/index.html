@@ -19,6 +19,9 @@
         </div>
         <button class="quote-btn">Request Service</button>
     </nav>
+
+    <div id="preloader">
+    </div>
     
     <section class="hero">
         <div class="hero-content">
@@ -74,6 +77,15 @@
         </div>
     </section>
 
-    
+    <script>
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('preloader').classList.add('loaded');
+      }, 3000);
+       setTimeout(() => {
+        document.getElementById('preloader').classList.add('hidden');
+      }, 4010); 
+    });
+  </script>
 </body>
 </html>
