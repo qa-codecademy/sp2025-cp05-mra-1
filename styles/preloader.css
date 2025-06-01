@@ -1,0 +1,42 @@
+#preloader{
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color:rgba(35, 186, 136, 0.98);
+    mask-image: url(/assets/Untitled-2.png);
+    mask-repeat: no-repeat;
+    mask-size: 100% 100%;
+    mask-position: center center;
+    animation-duration: 1.8s;
+    animation-name: scale ;
+    animation-iteration-count: infinite;
+}
+@keyframes scale{
+    50%{
+        scale: 1.1;
+    }
+    100%{
+        scale: 1;
+    }
+}
+@keyframes finishedPreloading {
+    100%{
+        scale: 2;
+        opacity: 0;
+
+    }
+    
+}
+.loaded{
+    animation-name: finishedPreloading !important; 
+    transition: 1s ease !important; 
+
+}
+.hidden{
+    display: none;
+}

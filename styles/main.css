@@ -6,6 +6,7 @@
 @import url(newstyle.css);
 @import url(floating-button.css);
 @import url(contactUs.css);
+@import url(preloader.css);
 
 html {
   scroll-behavior: smooth;
