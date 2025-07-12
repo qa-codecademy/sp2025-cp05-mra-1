@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mr.AllRound</title>
+    <link rel="stylesheet" href="styles/main.css">
+     </head>
+
+<body>
+    
+    <header>
+        <nav class="island-navbar">
+            <div class="navbar-header">
+                <a href="#home" class="navbar-brand">Mr.AllRound</a>
+                <button class="navbar-toggler" aria-label="Toggle navigation">
+                    <img src="assets/navbarArrow/navbarArrow.png" alt="Menu Toggle" class="toggler-icon">
+                </button>
+            </div>
+            <ul class="navbar-nav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about-us-section">About Us</a></li>
+               <li><a href="#home">Services</a></li>   <!--Todo soon™️ -->
+                <li><a href="#" id="openContactModalNav">Contact</a></li> </ul>
+        </nav>
+    </header>
+<div id="preloader"></div>
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-container">
+                <h2>Fast and efficient service</h2>
+                <h1 class="hero-title">
+                    Your Trusted Partner in Facility Management
+                </h1>
+                <p class="hero-subtitle">
+                    Clean, Maintain, and Manage with<br>
+                    <span id="typewriter"></span> Solutions
+                </p>
+
+                <div class="hero-btns">
+                    <button class="secondary-btn">Discover More</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="values-section">
+            <h2>Our Core Values</h2>
+            <p>What makes Mr.AllRound different</p>
+
+            <div class="values-grid">
+                <div class="value-card">
+                    <h3>Trustworthiness</h3>
+                    <p>
+                        Building trust with clients by being transparent,
+                        honest, and reliable in all interactions, including
+                        respecting privacy.
+                    </p>
+                </div>
+
+                <div class="value-card">
+                    <h3>Professionalism</h3>
+                    <p>
+                        Conducting all cleaning tasks with professionalism,
+                        including arriving on time, adhering to safety
+                        standards.
+                    </p>
+                </div>
+
+                <div class="value-card">
+                    <h3>Customer Satisfaction</h3>
+                    <p>
+                        Prioritizing the needs and preferences of customers
+                        and striving to exceed their expectations.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <section class="story-section" id="about">
+            <div class="story-content">
+                <div class="story-text">
+                    <h2>Behind the Mr.AllRound Company Stories</h2>
+                    <p>
+                        Explore the core mission and vision that drives us
+                        every day. At Behind the Stories Company, we're not
+                        just about cleaning homes; we're about making a
+                        difference in the lives of our clients and our
+                        community.
+                    </p>
+
+                    <ul class="story-features">
+                        <li>Clean Homes, Happy Hearts</li>
+                        <li>Purity, Refresh, Revitalize.</li>
+                        <li>Sparkle Every Space</li>
+                        <li>Cleanliness Standards</li>
+                    </ul>
+                </div>
+
+                <div class="story-image"></div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <section class="banner-section" id="services">
+            <div class="banner-content-wrapper">
+                <div class="banner">
+                    <div class="slider" style="--quantity: 3">
+                        <div class="item" style="--position: 1"><img src="assets/gallery/image1.jpg"
+                                alt="Gallery Image 1"></div>
+                        <div class="item" style="--position: 2"><img src="assets/gallery/image2.jpg"
+                                alt="Gallery Image 2"></div>
+                        <div class="item" style="--position: 3"><img src="assets/gallery/image3.jpg"
+                                alt="Gallery Image 3"></div>
+                    </div>
+                    <div class="model"></div>
+                </div>
+                <div class="banner-text">
+                    <h2>Explore Our Gallery</h2>
+                    <p>
+                        Discover the quality and care we bring to every project. From spotless homes to well-maintained offices, our gallery
+                        highlights the results of our dedication, professionalism, and attention to detail. Each photo reflects our commitment
+                        to excellence and the trust our clients place in us. Let our work speak for itself and inspire confidence in choosing
+                        Mr.AllRound for your next service.
+                    </p>
+                </div>
+            </div>
+
+            <div class="fullscreen-modal">
+                <button class="arrow-button left">&#10094;</button>
+                <img class="fullscreen-image" src="" alt="Fullscreen Image">
+                <button class="arrow-button right">&#10095;</button>
+                <div class="close-button">&times;</div>
+            </div>
+        </section>
+
+
+        <div class="divider"></div>
+
+        <div class="section-toggle-container">
+            <section id="about-us-section" class="about-us-section active-section">
+                <div class="about-us-container">
+                    <div class="about-us-wrapper">
+                        <div class="about-us-content">
+                            <h2 class="about-us-title">About Us</h2>
+                            <p class="about-us-text">
+                                Since the beginning of the coronavirus pandemic, we have been your reliable partner for
+                                facility services (including all types of cleaning, property maintenance, moving,
+                                clearing and waste removal, painting, and repair work). Thanks to our experience and
+                                numerous satisfied clients, we enjoy excellent reviews and have established ourselves as
+                                a professional service provider on the market.
+                            </p>
+                            <p class="about-us-text">
+                                Our goal is to offer you a completely worry-free service – reliable, efficient, and of
+                                the highest quality. Whether it’s thorough cleaning with disinfection, professional
+                                property maintenance, or a stress-free move – we take care of everything with attention
+                                and expertise.
+                            </p>
+                            <p class="about-us-text">
+                                Let us convince you with our service! We’ll be happy to support you.
+                            </p>
+                            <button class="toggle-section-btn" data-target="meet-our-team-section">Meet Our
+                                Team</button>
+                        </div>
+                        <img class="about-us-img" src="assets/about-image.jpg" alt="About Us Image">
+                    </div>
+                </div>
+            </section>
+
+            <section id="meet-our-team-section" class="meet-our-team-section hidden-section">
+                <h2>Meet Our Team</h2>
+                <div class="person-container">
+                    <div class="person" style="--color: #782a2b">
+                        <div class="container">
+                            <div class="conianer-inner">
+                                <div class="circle"></div>
+                                <img src="assets/meetTheTeam/image-1.png" alt="Lara Müller">
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <h3>Lara Müller</h3>
+                        <p>Facilities Maintenance Specialist</p>
+                    </div>
+
+                    <div class="person" style="--color: #37375e">
+                        <div class="container">
+                            <div class="conianer-inner">
+                                <div class="circle"></div>
+                                <img src="assets/meetTheTeam/image-2.png" alt="Nake Petsev">
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <h3>Nake Petsev</h3>
+                        <p>CEO</p>
+                    </div>
+
+                    <div class="person" style="--color: #3e6e7c">
+                        <div class="container">
+                            <div class="conianer-inner">
+                                <div class="circle"></div>
+                                <img src="assets/meetTheTeam/image-3.png" alt="Lena Schmid">
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <h3>Lena Schmid</h3>
+                        <p>Facility Maintenance Analyst</p>
+                    </div>
+                </div>
+                <button class="toggle-section-btn" data-target="about-us-section">About Us</button>
+            </section>
+        </div>
+
+        <section class="testimonials-container" id="testimonials">
+            <div class="elfsight-app-99b8f233-b8c9-4a02-a362-03aaf9edab2b" data-elfsight-app-lazy></div>
+            <div class="box"></div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-upper">
+            <figure class="grid-item-brand-bottom">
+                <img loading="lazy" class="brand-logo" src="assets/Logo/logo-rework-1355x1234.png"
+                    alt="mr-allaround logo" width="1355" height="1234" />
+            </figure>
+
+
+            <div class="footer-upper-nav">
+                <div class="grid-item-bottom">
+                    <h4>Navigation</h4>
+                    <nav class="bottom-nav">
+                        <ul class="link-list">
+                            <li><a class="underlined" href="#home">Home</a></li>
+                            <li><a class="underlined" href="#services">Services</a></li>
+                            <li>
+                                <a class="underlined" href="#testimonials">Client review</a>
+                            </li>
+                            <li><a class="underlined" href="#" id="openContactModalFooter">Contact</a></li> </ul>
+                    </nav>
+                </div>
+
+                <div class="grid-item-bottom">
+                    <h4>Service list</h4>
+                    <nav class="bottom-nav">
+                        <ul class="link-list">
+                            <li>
+                                <a class="underlined" href="#">Cleaning Services</a>
+                            </li>
+                            <li>
+                                <a class="underlined" href="#">Maintainance</a>
+                            </li>
+                            <li>
+                                <a class="underlined" href="#">Moving &amp; Logistics</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="grid-item-bottom">
+                    <h4>Contact Us</h4>
+                    <nav class="contact-list">
+                        <ul>
+                            <li>
+                                <span class="bottom-nav-contact"><img src="assets/Icons/location.png"
+                                            alt="Location" />Bannstrasse 5, 4600 Olten, Switzerland</span>
+                            </li>
+                            <li>
+                                <span class="bottom-nav-contact"><img src="assets/Icons/mail.png" alt="E-mail" /><a
+                                            href="mailto: info@mrallround.ch">info@mrallround.ch</a></span>
+                            </li>
+                            <li>
+                                <span class="bottom-nav-contact"><img src="assets/Icons/telephone.png" alt="Phone" /><a
+                                            href="tel: +41 78 692 51 55
+                                            ">+41 78 692 51 55
+                                        </a></span>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="social-icons-wrapper">
+                <span class="grid-item">
+                    <a href="" target="_blank"><img src="assets/Icons/facebook.png" alt="Facebook"></a>
+                </span>
+                <span class="grid-item">
+                    <a href="" target="_blank"><img src="assets/Icons/instagram.png" alt="Instagram"></a>
+                </span>
+                <span class="grid-item">
+                    <a href="" target="_blank"><img src="assets/Icons/linkedin.png" alt="LinkedIn"></a>
+                </span>
+                <span class="grid-item">
+                    <a href="" target="_blank"><img src="assets/Icons/whatsupp.png" alt="WhatsApp"></a>
+                </span>
+            </div>
+
+            <small>Copyright &copy;2025 Mr. Allaround. All rights reserved</small>
+        </div>
+
+    </footer>
+
+    <div id="contactModal" class="modal-overlay">
+        <div class="modal-content contact-form-modal-content">
+            <span class="close-button contact-modal-close-button">&times;</span>
+            <section class="contact-form-section no-padding"> <h2>Get in Touch</h2>
+                <p>We'd love to hear from you! Please fill out the form below and we'll get back to you as soon as possible.</p>
+
+                <div class="contact-form-container">
+                    <form action="#" method="POST"> <div class="form-group">
+                            <label for="name">Your Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject:</label>
+                            <input type="text" id="subject" name="subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message:</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Send Message">
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div id="interactiveModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div id="diagonalBoxContainerPlaceholder">
+                <div class="diagonal-box-container">
+                    <div class="diagonal-separator-line"></div>
+
+                    <div class="diagonal-half top-right-section">
+                        <div class="blurred-background"></div>
+                        <a href="#" class="half-content open-contact-modal-diag" data-delay="700"> <span class="half-text">Contact Us</span>
+                        </a>
+                    </div>
+
+                    <div class="diagonal-half bottom-left-section">
+                        <div class="blurred-background"></div>
+                        <a href="page2.html" class="half-content" data-delay="700">
+                            <span class="half-text">Service Request</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="circular-image-btn" id="openPopupButton">
+  <img
+    src="assets/Mr.Allround_logo_color_PNG_300ppi-01.png"
+    alt="Request Service"
+    class="main-logo-icon"
+  />
+  <div class="speech-bubble-periodic" id="periodicBubble">
+    <span class="speech-bubble-close-btn">&times;</span>
+    <p>Need help? Request service!</p>
+  </div>
+</div>
+    <script src="scripts/preloader.js"></script>
+    <script src="https://static.elfsight.com/platform/platform.js" async=""></script>
+	<script src="scripts/contactUs.js"></script>
+    <script src="scripts/diagbox.js"></script>
+    <script src="scripts/floating-button.js"></script>
+    <script src="scripts/typewriter.js"></script>
+    <script src="scripts/navbar.js"></script>
+     </body>
+
+</html>

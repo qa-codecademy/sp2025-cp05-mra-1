@@ -1,0 +1,12 @@
+@import url(aboutus.css);
+@import url(diagbox.css);
+@import url(gallery.css);
+@import url(homePageStyle.css);
+@import url(navbar.css);
+@import url(floating-button.css);
+@import url(contactUs.css);
+@import url(preloader.css);
+
+html {
+  scroll-behavior: smooth;
+}

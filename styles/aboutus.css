@@ -1,0 +1,406 @@
+.section-toggle-container {
+  position: relative;
+  overflow: hidden;
+  min-height: 650px;
+  height: auto;
+  padding-bottom: 50px;
+  display: grid;
+  grid-template-areas: "sections-content";
+  transition: min-height 0.8s ease-in-out;
+}
+
+.about-us-section,
+.meet-our-team-section {
+  grid-area: sections-content;
+  width: 100%;
+  padding: 80px 10%;
+  background-color: #f5fbf9;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  transition: opacity 1.2s ease-in-out, visibility 1.2s ease-in-out;
+  margin-bottom: 0px;
+}
+
+.hidden-section {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  height: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  overflow: hidden;
+}
+
+.active-section {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  height: auto;
+  padding: 80px 10%;
+  margin-bottom: 0px;
+}
+
+.fade-out {
+  animation: fadeOut 1.2s forwards;
+}
+
+.fade-in {
+  animation: fadeIn 1.2s forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+    padding: 80px 10%;
+    margin-bottom: 0px;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    height: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    height: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    height: auto;
+    padding: 80px 10%;
+    margin-bottom: 0px;
+  }
+}
+
+.toggle-section-btn {
+  margin-top: 30px;
+  padding: 12px 25px;
+  background-color: #2a7f62;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 17.6px;
+}
+
+.toggle-section-btn:hover {
+  background-color: #1e6b50;
+  transform: translateY(-2px);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-us-container {
+  max-width: 1200px;
+  margin: 0px auto;
+  text-align: center;
+}
+
+.about-us-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  text-align: left;
+}
+
+.about-us-content {
+  flex: 1;
+}
+
+.about-us-title {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.about-us-text {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #555;
+  line-height: 1.7;
+}
+
+.about-us-img {
+  flex: 1;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  object-fit: contain;
+}
+
+.arrow-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 48px;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  padding: 0px 15px;
+  user-select: none;
+}
+
+.arrow-button.left {
+  left: 20px;
+}
+
+.arrow-button.right {
+  right: 20px;
+}
+
+.meet-our-team-section {
+  text-align: center;
+}
+
+.meet-our-team-section h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+.person-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.person {
+  width: 300px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.person:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.person .container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0px auto 20px;
+}
+
+.person .container-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--color);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.person .circle {
+  width: 80%;
+  height: 80%;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.person img {
+  position: absolute;
+  bottom: 0px;
+  width: 90%;
+  height: auto;
+  object-fit: contain;
+  z-index: 1;
+}
+
+.person .divider {
+  height: 1px;
+  background-color: #eee;
+  margin: 20px auto;
+  width: 80%;
+}
+
+.person h3 {
+  font-size: 22px;
+  margin-bottom: 5px;
+  color: #222;
+}
+
+.person p {
+  font-size: 16px;
+  color: #666;
+}
+
+@media (max-width: 1024px) {
+  .about-us-wrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .about-us-img {
+    max-width: 80%;
+    height: auto;
+    order: 1;
+  }
+
+  .about-us-content {
+    order: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-toggle-container {
+    min-height: 700px;
+  }
+
+  .about-us-section,
+  .meet-our-team-section {
+    padding: 40px 5%;
+  }
+
+  .about-us-title,
+  .meet-our-team-section h2 {
+    font-size: 32px;
+  }
+
+  .about-us-text {
+    font-size: 17px;
+  }
+
+  .about-us-img {
+    max-width: 90%;
+    object-fit: contain;
+  }
+
+  .person-container {
+    gap: 20px;
+  }
+
+  .person {
+    width: 80%;
+    max-width: 320px;
+    padding: 20px;
+  }
+
+  .person .container {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 15px;
+  }
+
+  .person h3 {
+    font-size: 20px;
+  }
+
+  .person p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-toggle-container {
+    min-height: 750px;
+  }
+
+  .toggle-section-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .about-us-title,
+  .meet-our-team-section h2 {
+    font-size: 26px;
+  }
+
+  .about-us-text {
+    font-size: 16px;
+  }
+
+  .about-us-img {
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+  .person {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .person .container {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+
+  .person h3 {
+    font-size: 18px;
+  }
+
+  .person p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 375px) {
+  .section-toggle-container {
+    min-height: 800px;
+  }
+
+  .about-us-title,
+  .meet-our-team-section h2 {
+    font-size: 24px;
+  }
+
+  .about-us-text {
+    font-size: 15px;
+  }
+
+  .person {
+    padding: 12px;
+  }
+
+  .person h3 {
+    font-size: 17px;
+  }
+
+  .person p {
+    font-size: 13px;
+  }
+}
